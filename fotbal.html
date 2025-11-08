@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Fotbalový svět</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #fff;
+            color: #000;
+        }
+
+        header {
+            text-align: center;
+            background-color: #000;
+            color: white;
+            padding: 30px 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+            background-color: #fff;
+        }
+
+        .box {
+            background-color: #000;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            background-color: #222;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Vítejte ve světě fotbalu</h1>
+        <p>Objev zajímavosti o tomto sportu</p>
+    </header>
+
+    <div class="grid">
+        <div class="box">
+            <h2>Co je fotbal</h2>
+            <p>Fotbal je týmový sport, ve kterém jde o vstřelení gólů do soupeřovy branky.</p>
+        </div>
+
+        <div class="box">
+            <h2>Týmy</h2>
+            <p>Kluby jako Real Madrid, FC Barcelona nebo Slavia Praha tvoří základ fotbalové scény.</p>
+        </div>
+
+        <div class="box">
+            <h2>Hráči a jejich sláva</h2>
+            <p>Messi, Ronaldo nebo Pelé – legendy, které změnily svět fotbalu.</p>
+        </div>
+
+        <div class="box">
+            <h2>Ocenění</h2>
+            <p>Zlatý míč, Nejlepší hráč FIFA nebo trofej Ligy mistrů – vrcholy kariéry.</p>
+        </div>
+
+        <div class="box">
+            <h2>Pravidla hry</h2>
+            <p>90 minut, dva poločasy, ofsajdy, fauly a žluté karty – základní pravidla hry.</p>
+        </div>
+
+        <div class="box">
+            <h2>Fanoušci</h2>
+            <p>Vášniví podporovatelé tvoří atmosféru zápasů na stadionech po celém světě.</p>
+        </div>
+    </div>
+
+</body>
+</html>

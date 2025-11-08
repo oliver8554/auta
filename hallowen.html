@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #000;
+            color: #ff3300;
+            text-align: center;
+            padding: 50px;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px red, 0 0 20px orange;
+            animation: blink 1s infinite;
+        }
+        
+        
+
+        @keyframes blink {
+            0%, 50%, 100% { color: #ff3300; }
+            25%, 75% { color: #ff0000; }
+        }
+
+        form {
+            background-color: #000;
+            padding: 25px;
+            border-radius: 15px;
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 20px red, 0 0 40px red; 
+        }
+
+        input, select, textarea {
+            margin: 10px 0;
+            padding: 8px;
+            width: 80%;
+            border: 1px solid #ff3300;
+            border-radius: 5px;
+            background-color: #000; 
+            color: #ff3300;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            background-color: #ff3300;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 0 10px red;
+        }
+
+        button:hover {
+            background-color: #ff0000;
+            box-shadow: 0 0 20px red;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .ghost, .bat {
+            position: absolute;
+            color: white;
+            font-size: 2em;
+            animation: float 10s infinite linear;
+        }
+
+        .ghost {
+            top: 20%;
+            left: -10%;
+            animation-duration: 12s;
+        }
+
+        .bat {
+            top: 40%;
+            left: 100%;
+            animation-duration: 8s;
+        }
+
+        @keyframes float {
+            0% { transform: translateX(0) translateY(0); opacity: 0; }
+            10% { opacity: 1; }
+            50% { transform: translateX(100vw) translateY(-50px); opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateX(200vw) translateY(0); opacity: 0; }
+        }
+
+        label {
+  font-family: 'Creepster', cursive;
+  color: #ff3300;
+  text-shadow: 0 0 5px red, 0 0 10px orange;
+  animation: blink 1.2s infinite;
+  display: inline-block;
+  transform: rotate(-1deg);
+        }
+
+    body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  /* viditelná světle rudá mlha */
+  background: radial-gradient(circle, rgba(255,50,50,0.15), transparent 70%);
+  animation: drift 60s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes drift {
+  0% { transform: translateX(0) translateY(0); }
+  100% { transform: translateX(-50px) translateY(-20px); }
+}
+
+
+    </style>
+</head>
+<body>
+    <style>
+        h1{
+            color: red;
+        }
+    </style>
+    <h1>halloween formulář💀👻</h1>
+    
+    <form>
+    <fieldset>
+         <label>Jméno:</label>
+        <input type="text" name="jmeno" required><br>
+        <label>věk:</label><br>
+        <input type="number" name="věk" required><br>
+        <label>kostým:</label>
+        <input type="text" name="kostým" required><br>
+         <label>Oblíbená sladkost:</label>
+        <input type="text" name="sladkost"><br>
+         <label>Bojíš se duchů?</label>
+        <select name="duch">
+            <option value="ano">Ano</option>
+            <option value="ne">Ne</option>
+        </select><br>
+        <label>Jak si strašidelný?</label><br>
+        <select name="strašidelnost">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+
+        </select><br>
+        <button type="submit">Odeslat</button>
+    </fieldset>
+</form>
+</body>
+</html>
